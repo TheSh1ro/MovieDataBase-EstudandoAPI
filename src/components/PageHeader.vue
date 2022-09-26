@@ -1,21 +1,22 @@
 <template>
-  <div class="pageview-container">
-    <span class="pageview-button">Gênero</span>
-    <span class="pageview-button">Em alta</span>
-    <span class="pageview-button">Atores</span>
-  </div>
+  <header id="header">
+    <div class="pageview-container">
+      <RouterLink to="/generos" class="pageview-button">Gênero</RouterLink>
+      <RouterLink to="/emalta" class="pageview-button">Em Alta</RouterLink>
+      <RouterLink to="/autores" class="pageview-button">Autores</RouterLink>
+    </div>
+  </header>
 </template>
 
 <style scoped>
 #header {
-  color: #fe958f;
-  background-color: #122f51;
-  font-size: 1.5rem;
+  color: rgb(219, 23, 23);
+  background-color: rgb(0, 0, 0);
+  font-size: 2rem;
 
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
 }
 .pageview-container {
   cursor: default;
@@ -23,6 +24,8 @@
   display: flex;
   flex-direction: row;
   gap: 1vw;
+  justify-content: center;
+  align-items: center;
 }
 .pageview-button {
   padding: 5px;

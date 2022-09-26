@@ -1,15 +1,10 @@
 <script setup>
-import { RouterLink, RouterView } from "vue-router";
 import PageHeader from "./components/PageHeader.vue";
 </script>
 
 <template>
-  <header id="header">
-    <PageHeader></PageHeader>
-  </header>
-  <main id="main">
-    <RouterView></RouterView>
-  </main>
+  <PageHeader></PageHeader>
+  <RouterView></RouterView>
 </template>
 
 <style>
@@ -36,8 +31,8 @@ body {
 #main {
   min-height: 90vh;
 
-  color: black;
-  background-color: #17a7a8;
+  background: linear-gradient(90deg, rgba(9,121,78,1) 20%, rgba(0,212,255,1) 100%);
+  background-color: black;
   font-size: 1rem;
 
   display: flex;
