@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import TrendingView from "../views/TrendingView.vue";
 import GenerosView from "../views/GenerosView.vue";
-import AutoresView from "../views/AutoresView.vue";
+import FilmesView from "../views/FilmesView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,9 +23,10 @@ const router = createRouter({
       component: GenerosView,
     },
     {
-      path: "/autores",
-      name: "autores",
-      component: AutoresView,
+      path: "/filmes/:id",
+      name: "filmes",
+      component: FilmesView,
+      props: true,
     },
   ],
 });

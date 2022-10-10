@@ -1,5 +1,11 @@
+<script>
+export default {
+  props: ["id"],
+};
+</script>
 <template>
   <main id="main">
+    <h1>Filmes - {{ id }}</h1>
     <div class="trendingArea">
       <div class="card">
         <h1>Autor</h1>

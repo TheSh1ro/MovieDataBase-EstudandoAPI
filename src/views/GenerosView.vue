@@ -1,14 +1,40 @@
+<script>
+import axios from "axios";
+export default {
+  data() {
+    return {
+      generos: {},
+    };
+  },
+  async created() {
+    const url = `https://api.themoviedb.org/3/genre/movie/list?api_key=29aadd5dd4da8c335474e0ecb99c0e8c&language=pt-BR`;
+    const res = await axios.get(url);
+    this.generos = res.data.genres;
+  },
+  methods: {
+    irParaGenero(genero) {
+      this.$router.push(`/filmes/${genero}`);
+    },
+  },
+};
+</script>
 <template>
   <main id="main">
+    <h1>Gêneros</h1>
     <div class="trendingArea">
-      <div class="card">
-        <h1>Ação</h1>
+      <div
+        class="card"
+        v-for="genero of generos"
+        :key="genero.id"
+        @click="irParaGenero(genero.id)"
+      >
+        <h1>{{ genero.name }}</h1>
         <img
-          src="http://vacanerd.com.br/wp-content/uploads/2014/03/mzl.ltdunkrj-200x300.jpg"
+          src="https://br.web.img3.acsta.net/medias/nmedia/18/92/03/73/20176438.jpg"
           alt=""
         />
       </div>
-      <div class="card">
+      <!-- <div class="card">
         <h1>Aventura</h1>
         <img
           src="https://br.web.img3.acsta.net/medias/nmedia/18/92/03/73/20176438.jpg"
@@ -28,7 +54,7 @@
           src="https://br.web.img2.acsta.net/pictures/18/05/04/15/03/2133793.jpg"
           alt=""
         />
-      </div>
+      </div> -->
     </div>
   </main>
 </template>

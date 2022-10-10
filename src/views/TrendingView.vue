@@ -1,5 +1,6 @@
 <template>
   <main id="main">
+    <h1>Em alta</h1>
     <div class="trendingArea">
       <div class="card">
         <h1>Avenger</h1>
@@ -56,6 +57,12 @@
           src="https://lumiere-a.akamaihd.net/v1/images/eu_disneyplus_avengers-endgame_c169_r_f4af8cb5.jpeg?region=355,0,921,921"
           alt=""
         />
+      </div>
+    </div>
+    <div class="trendingArea" v-for="filme in filmes">
+      <div class="card">
+        <img src="{{ filme.link }}" alt="" />
+        <h1>{{ filme.nome }}</h1>
       </div>
     </div>
   </main>

@@ -3,7 +3,7 @@
     <div class="pageview-container">
       <RouterLink to="/generos" class="pageview-button">Gênero</RouterLink>
       <RouterLink to="/emalta" class="pageview-button">Em Alta</RouterLink>
-      <RouterLink to="/autores" class="pageview-button">Autores</RouterLink>
+      <!-- <RouterLink to="/autores" class="pageview-button">Autores</RouterLink> -->
     </div>
   </header>
 </template>
