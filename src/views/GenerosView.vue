@@ -34,27 +34,6 @@ export default {
           alt=""
         />
       </div>
-      <!-- <div class="card">
-        <h1>Aventura</h1>
-        <img
-          src="https://br.web.img3.acsta.net/medias/nmedia/18/92/03/73/20176438.jpg"
-          alt=""
-        />
-      </div>
-      <div class="card">
-        <h1>Terror</h1>
-        <img
-          src="https://br.web.img3.acsta.net/pictures/17/03/30/22/44/345288.jpg"
-          alt=""
-        />
-      </div>
-      <div class="card">
-        <h1>Romance</h1>
-        <img
-          src="https://br.web.img2.acsta.net/pictures/18/05/04/15/03/2133793.jpg"
-          alt=""
-        />
-      </div> -->
     </div>
   </main>
 </template>

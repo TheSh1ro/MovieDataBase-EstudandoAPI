@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import TrendingView from "../views/TrendingView.vue";
 import GenerosView from "../views/GenerosView.vue";
 import FilmesView from "../views/FilmesView.vue";
 
@@ -11,11 +10,6 @@ const router = createRouter({
       path: "/",
       name: "home",
       component: HomeView,
-    },
-    {
-      path: "/emalta",
-      name: "trending",
-      component: TrendingView,
     },
     {
       path: "/generos",

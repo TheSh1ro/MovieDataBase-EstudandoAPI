@@ -13,11 +13,11 @@ export default {
     const res = await axios.get(url);
     this.filmes = res.data.results;
   },
-  methods: {
-    irParaFilme(filme) {
-      this.$router.push(`/filmes/${filme.title}`);
-    },
-  },
+  // methods: {
+  //   irParaFilme(filme) {
+  //     this.$router.push(`/filmes/${filme.title}`);
+  //   },
+  // },
 };
 </script>
 <template>
@@ -28,10 +28,9 @@ export default {
         class="card"
         v-for="filme of filmes"
         :key="filme.id"
-        @click="irParaDetalhes(filme.id)"
+        @click="irParaFilme(filme.id)"
       >
-        <h1>Nome: {{ filme.title }}</h1>
-        <h1>ID: {{ id }}</h1>
+        <h1>{{ filme.title }}</h1>
         <img
           src="https://br.web.img3.acsta.net/medias/nmedia/18/92/03/73/20176438.jpg"
           alt=""
