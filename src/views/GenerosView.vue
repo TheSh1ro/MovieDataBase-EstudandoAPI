@@ -12,8 +12,8 @@ export default {
     this.generos = res.data.genres;
   },
   methods: {
-    irParaGenero(genero) {
-      this.$router.push(`/filmes/${genero}`);
+    irParaGenero(id, name) {
+      this.$router.push(`/filmes/${id}-${name}`);
     },
   },
 };
@@ -26,7 +26,7 @@ export default {
         class="card"
         v-for="genero of generos"
         :key="genero.id"
-        @click="irParaGenero(genero.id)"
+        @click="irParaGenero(genero.id, genero.name)"
       >
         <h1>{{ genero.name }}</h1>
         <img
