@@ -20,7 +20,9 @@ export default {
 </script>
 <template>
   <main id="main">
+  <div class="description">
     <h1>Gêneros</h1>
+  </div>
     <div class="trendingArea">
       <div
         class="card"
@@ -38,6 +40,9 @@ export default {
   </main>
 </template>
 <style>
+#main {
+  background-image: url(https://img.freepik.com/vetores-gratis/vector-background-seamless-filme-retro_2065-725.jpg?w=2000);
+}
 .trendingArea {
   padding: 5vh;
 

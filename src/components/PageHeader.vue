@@ -1,8 +1,8 @@
 <template>
   <header id="header">
     <div class="pageview-container">
+      <RouterLink to="/" class="pageview-button">Home</RouterLink>
       <RouterLink to="/generos" class="pageview-button">Gêneros</RouterLink>
-      <!-- <RouterLink to="/autores" class="pageview-button">Autores</RouterLink> -->
     </div>
   </header>
 </template>

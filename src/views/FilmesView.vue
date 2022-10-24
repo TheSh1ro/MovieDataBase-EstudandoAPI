@@ -14,16 +14,18 @@ export default {
     this.filmes = res.data.results;
   },
   methods: {
-    irParaFilme(filme) {
-      this.$router.push(`/filmes/${filme.title}`);
+    irParaDetalhes(id) {
+      this.$router.push(`/detalhes/${id}`);
     },
   },
 };
 </script>
 <template>
   <main id="main">
-    <h1>Filme: {{ id }}</h1>
-    <div class="moviesArea">
+    <div class="description">
+      <h1>Filmes do gênero com ID {{ id }}</h1>
+    </div>
+    <div class="movies-area">
       <div
         class="card"
         v-for="filme of filmes"
@@ -31,7 +33,7 @@ export default {
         @click="irParaDetalhes(filme.id)"
       >
         <h1>Nome: {{ filme.title }}</h1>
-        <h1>ID: {{ id }}</h1>
+        <h1>ID: {{ filme.id }}</h1>
         <img
           src="https://br.web.img3.acsta.net/medias/nmedia/18/92/03/73/20176438.jpg"
           alt=""
@@ -41,9 +43,13 @@ export default {
   </main>
 </template>
 <style scoped>
-.moviesArea {
+.movies-area {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  gap: 20px;
+  grid-template-columns: repeat(4, 20%);
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  margin: 1vw;
 }
 </style>
