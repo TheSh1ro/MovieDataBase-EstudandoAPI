@@ -19,7 +19,7 @@ const router = createRouter({
       props: true,
     },
     {
-      path: "/filmes/:id",
+      path: "/filmes/:info",
       name: "filmes",
       component: FilmesView,
       props: true,
@@ -28,9 +28,4 @@ const router = createRouter({
       path: "/detalhes/:id",
       name: "detalhes",
       component: DetalhesView,
-      props: true,
-    },
-  ],
-});
-
-export default router;
+      prohttps://www.themoviedb.org/tv/157059-poliana-moca
