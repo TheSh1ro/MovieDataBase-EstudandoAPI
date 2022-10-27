@@ -1,8 +1,15 @@
+<script>
+import SelectGeneros from "./SelectGeneros.vue";
+export default {
+  components: { SelectGeneros },
+};
+</script>
+
 <template>
   <header id="header">
     <div class="pageview-container">
       <RouterLink to="/" class="pageview-button">Home</RouterLink>
-      <RouterLink to="/generos" class="pageview-button">Gêneros</RouterLink>
+      <SelectGeneros />
     </div>
   </header>
 </template>
@@ -33,5 +40,16 @@
 .pageview-button:hover {
   background-color: rgb(151, 31, 31);
   color: #ffb2ae;
+}
+.sla {
+  color: rgb(219, 23, 23);
+  background-color: rgb(0, 0, 0);
+  font-size: 2rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  cursor: grab;
+  border: none;
 }
 </style>

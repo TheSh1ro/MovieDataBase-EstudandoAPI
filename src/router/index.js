@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import GenerosView from "../views/GenerosView.vue";
 import FilmesView from "../views/FilmesView.vue";
 import DetalhesView from "../views/DetalhesView.vue";
 
@@ -11,11 +10,6 @@ const router = createRouter({
       path: "/",
       name: "home",
       component: HomeView,
-    },
-    {
-      path: "/generos",
-      name: "generos",
-      component: GenerosView,
       props: true,
     },
     {
@@ -28,4 +22,8 @@ const router = createRouter({
       path: "/detalhes/:id",
       name: "detalhes",
       component: DetalhesView,
-      prohttps://www.themoviedb.org/tv/157059-poliana-moca
+      props: true,
+    },
+  ],
+});
+export default router;

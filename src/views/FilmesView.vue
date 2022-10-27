@@ -7,6 +7,7 @@ export default {
     return {
       id: "",
       name: "",
+      image: ",",
       filmes: {},
     };
   },
@@ -20,6 +21,9 @@ export default {
   methods: {
     irParaDetalhes(id) {
       this.$router.push(`/detalhes/${id}`);
+    },
+    setImage(path) {
+      return "https://image.tmdb.org/t/p/original" + path;
     },
   },
 };
@@ -36,13 +40,8 @@ export default {
         :key="filme.id"
         @click="irParaDetalhes(filme.id)"
       >
-        <h1>Nome: {{ filme.title }}</h1>
-        <h1>ID: {{ filme.id }}</h1>
-        <img
-          src="https://br.web.img3.acsta.net/medias/nmedia/18/92/03/73/20176438.jpg"
-          alt=""
-        />
-        <h1>{{}}</h1>
+        <h1>{{ filme.title }}</h1>
+        <img :src="setImage(filme.backdrop_path)" />
       </div>
     </div>
   </main>
