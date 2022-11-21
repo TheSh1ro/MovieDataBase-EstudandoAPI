@@ -17,27 +17,11 @@ export default {
     },
   },
 };
-
-
-// import axios from "axios";
-// import { ref, onMounted } from "vue";
-// import { useRouter } from "vue-router";
-
-// const router = useRouter();
-// const generos = ref({});
-// onMounted(async () => {
-//   const url = `https://api.themoviedb.org/3/genre/movie/list?api_key=29aadd5dd4da8c335474e0ecb99c0e8c&language=pt-BR`;
-//   const res = await axios.get(url);
-//   generos.value = res.data.genres;
-// });
-// function irParaGenero(id, name) {
-//   router.push(`/filmes/${id}-${name}`);
-// }
 </script>
 <template>
   <main id="main">
     <div class="description">
-      <h1>Gêneros</h1>
+      <h1>Selecione um gênero</h1>
     </div>
     <div class="trendingArea">
       <div
@@ -47,10 +31,6 @@ export default {
         @click="irParaGenero(genero.id, genero.name)"
       >
         <h1>{{ genero.name }}</h1>
-        <img
-          src="https://br.web.img3.acsta.net/medias/nmedia/18/92/03/73/20176438.jpg"
-          alt=""
-        />
       </div>
     </div>
   </main>
@@ -60,25 +40,27 @@ export default {
   background-image: url(https://img.freepik.com/vetores-gratis/vector-background-seamless-filme-retro_2065-725.jpg?w=2000);
 }
 .trendingArea {
-  padding: 5vh;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
 
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  border: 1px solid white;
+  background-color: black;
+  padding: 1px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
 
-  border: 5px solid black;
-  cursor: default;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border: 1px solid black;
 }
 .card:hover {
   cursor: pointer;
+  border: 1px solid red;
 }
 
 .card > img {
@@ -86,10 +68,7 @@ export default {
   max-width: 333px;
 }
 .card > h1 {
-  padding: 1vh;
   font-size: 1.5rem;
-  background-color: rgb(0, 0, 0);
-  color: white;
   text-align: center;
 }
 </style>

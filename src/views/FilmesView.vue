@@ -31,7 +31,7 @@ export default {
 <template>
   <main id="main">
     <div class="description">
-      <h1>Filmes do gênero com ID {{ id }}</h1>
+      <h1>{{ this.name }}</h1>
     </div>
     <div class="movies-area">
       <div

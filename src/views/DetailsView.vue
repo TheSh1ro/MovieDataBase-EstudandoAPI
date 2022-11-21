@@ -13,11 +13,6 @@ export default {
     const res = await axios.get(url);
     this.filmes = res.data.results;
   },
-  // methods: {
-  //   irParaFilme(filme) {
-  //     this.$router.push(`/filmes/${filme.title}`);
-  //   },
-  // },
 };
 </script>
 <template>

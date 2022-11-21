@@ -1,15 +1,10 @@
-<script>
-import SelectGeneros from "./SelectGeneros.vue";
-export default {
-  components: { SelectGeneros },
-};
-</script>
+<script></script>
 
 <template>
   <header id="header">
     <div class="pageview-container">
       <RouterLink to="/" class="pageview-button">Home</RouterLink>
-      <SelectGeneros />
+      <span class="pageview-button">Gêneros</span>
     </div>
   </header>
 </template>
