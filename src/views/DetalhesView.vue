@@ -28,11 +28,13 @@ export default {
   padding: 20px 40px;
   color: rgb(255, 254, 254);
   background-color: rgba(0, 0, 0, 0.75);
+  width: fit-content;
 }
 h1 {
   text-align: center;
 }
 .sinopse {
   font-size: 1.2rem;
+  padding-inline: 30%;
 }
 </style>

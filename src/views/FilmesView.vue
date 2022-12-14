@@ -49,7 +49,7 @@ export default {
 <style scoped>
 .movies-area {
   display: grid;
-  grid-template-columns: repeat(3, 20%);
+  grid-template-columns: repeat(5, 15%);
   justify-content: center;
 }
 .card {
