@@ -3,8 +3,8 @@
 <template>
   <header id="header">
     <div class="pageview-container">
-      <RouterLink to="/" class="pageview-button">Home</RouterLink>
-      <span class="pageview-button">Gêneros</span>
+      <RouterLink to="/" class="pageview-button">Gêneros</RouterLink>
+      <!-- <span class="pageview-button">Gêneros</span> -->
     </div>
   </header>
 </template>

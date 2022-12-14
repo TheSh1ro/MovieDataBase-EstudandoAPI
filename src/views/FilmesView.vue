@@ -49,11 +49,16 @@ export default {
 <style scoped>
 .movies-area {
   display: grid;
-  grid-template-columns: repeat(4, 20%);
+  grid-template-columns: repeat(3, 20%);
   justify-content: center;
-  align-items: center;
 }
 .card {
   margin: 1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card > h1 {
+  font-size: 16px;
 }
 </style>

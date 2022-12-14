@@ -29,6 +29,8 @@ body {
 }
 
 #main {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   min-height: 90vh;
 
   background: linear-gradient(
@@ -43,7 +45,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5vh 5vw;
+  padding: 20px;
   gap: 2vh;
 }
 .description {
